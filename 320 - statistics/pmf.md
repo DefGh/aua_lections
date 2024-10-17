@@ -7,7 +7,7 @@ Probability Mass Function
 
 The probability mass function (pmf) is a function that gives the probability that a discrete random variable is exactly equal to some value. The probability mass function is often the primary means of defining a discrete probability distribution, and such functions exist for either scalar or multivariate random variables whose domain is discrete.
 
-$$ P(x) = \frac{\lambda^xe^\lambda}{x!} $$
+$$ P(x) = \frac{\lambda^xe^{-\lambda}}{x!} $$
 
 where:   
  - $P(x)$ is the probability of getting exactly x successes
