@@ -1,4 +1,4 @@
-# Poison Distribution
+# Poisson Distribution
 
 The Poisson distribution is a probability distribution that describes how many times an event is likely to occur within a specified period of time. It is used for independent events which occur at a constant rate within a given interval of time.
 
