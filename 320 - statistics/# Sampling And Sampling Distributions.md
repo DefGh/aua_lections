@@ -233,6 +233,10 @@ where
 - $n_1$ is the sample size of the first population
 - $n_2$ is the sample size of the second population
 
+$$ Z_{stat} = {(\bar{x}_1 - \bar{x}_2) - (\mu_1 - \mu_2) \over \sigma_{\bar{x}_1 - \bar{x}_2} } $$
+
+
+
 ## Standard error of the difference between two means (pooled)
 
 $$ t_{\bar{x}}= {(\bar{x}_1 - \bar{x}_2) - (\mu_1 - \mu_2) \over \sqrt{ s_p^2 \left( {1 \over n_1} + {1 \over n_2} \right) } } $$
@@ -246,7 +250,7 @@ where
 - $\mu_2$ is the population mean of the second population
 - $s_p^2$ is the pooled variance
 
-## Pooled variance
+### Pooled variance
 
 $$ s_p^2 = { (n_1 - 1)s_1^2 + (n_2 - 1)s_2^2 \over n_1 + n_2 - 2 } $$
 
@@ -256,5 +260,67 @@ where
 - $n_1$ is the sample size of the first population
 - $s_1^2$ is the sample variance of the first population
 - $n_2$ is the sample size of the second population
+- $s_2^2$ is the sample variance of the second population
+
+# Analysis of Variance (ANOVA)
+
+## Steps for ANOVA
+
+$$ SST = \sum_{i=1}^k \sum_{j=1}^{n_i} (x_{ij} - \bar{x})^2 $$
+
+$$ SSB = \sum_{i=1}^k n_i (\bar{x}_i - \bar{x})^2 $$
+
+$$ SSE = SST - SSB $$
+
+$$ df_{total} = N - 1 $$
+
+$$ df_{between} = k - 1 $$
+
+$$ df_{within} = N - k $$
+
+$$ MSB = {SSB \over df_{between}} $$
+
+$$ MSW = {SSE \over df_{within}} $$
+
+$$ F = {MSB \over MSW} $$
+
+# Chi-Square Test
+
+$$ \chi^2 = \sum { (O - E)^2 \over E } $$
+
+where
+
+- $\chi^2$ is the chi-square statistic
+- $O$ is the observed frequency
+- $E$ is the expected frequency
+
+## Degrees of freedom
+
+$$ df = (r - 1)(c - 1) $$
+
+where
+
+- $df$ is the degrees of freedom
+- $r$ is the number of rows
+- $c$ is the number of columns
+
+# Hypothesis Testing for the Population Variance
+
+## Test statistic for the population variance
+
+$$ \chi^2 = { (n - 1)s^2 \over \sigma^2 } $$
+
+where
+
+- $\chi^2$ is the chi-square statistic
+- $n$ is the sample size
+- $s^2$ is the sample variance
+
+$$ F = { s_1^2 \over s_2^2 } $$
+
+where
+
+- $F$ is the F-statistic
+- $s_1^2$ is the sample variance of the first population
 - $s_2^2$ is the sample variance of the second population
 
